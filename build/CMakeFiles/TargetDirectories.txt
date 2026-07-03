@@ -1,0 +1,3 @@
+/mnt/c/Users/ABHIJAYS/System-design/qualcomm-project cpp/build/CMakeFiles/server.dir
+/mnt/c/Users/ABHIJAYS/System-design/qualcomm-project cpp/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/ABHIJAYS/System-design/qualcomm-project cpp/build/CMakeFiles/rebuild_cache.dir

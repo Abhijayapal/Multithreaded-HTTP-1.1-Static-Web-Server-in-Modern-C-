@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/server.dir/link.d CMakeFiles/server.dir/src/main.cpp.o CMakeFiles/server.dir/src/Logger.cpp.o CMakeFiles/server.dir/src/SocketServer.cpp.o CMakeFiles/server.dir/src/HttpRequestParser.cpp.o CMakeFiles/server.dir/src/FileService.cpp.o CMakeFiles/server.dir/src/ThreadPool.cpp.o CMakeFiles/server.dir/src/LRUCache.cpp.o -o server
