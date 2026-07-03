@@ -43,24 +43,6 @@ This project was built to strengthen my understanding of systems programming con
 └── CMakeLists.txt
 ```
 
-## 5. Architecture Diagram
-
-```mermaid
-graph TD
-    A[Browser] -->|HTTP GET| B[Listening Socket]
-    B --> C[accept()]
-    C -->|Dispatch| D[Thread Pool Queue]
-    D --> E[Worker Thread]
-    E -->|recv()| F[HTTP Request Parser]
-    F --> G[File Service]
-    G --> H[LRU Cache]
-    H -->|Hit| I[RAM]
-    H -->|Miss| J[File System]
-    I -->|send()| K[HTTP Response]
-    J -->|send()| K
-    K --> A
-```
-
 ## 6. Features
 - **HTTP/1.1 GET Support**: Parses HTTP/1.1 GET requests to extract the requested resource and protocol version.
 - **Custom Thread Pool**: A pre-allocated, fixed-size thread pool utilizes `std::condition_variable` to manage concurrent loads without OS thread-creation overhead.
