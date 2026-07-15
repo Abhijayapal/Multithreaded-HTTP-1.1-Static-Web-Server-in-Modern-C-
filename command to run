@@ -1,0 +1,20 @@
+# 1. Navigate to your project folder
+cd "/mnt/c/Users/ABHIJAYS/System-design/qualcomm-project cpp"
+
+# 2. Go into the build directory
+cd build
+
+# 3. Generate the build files and compile the code
+cmake ..
+make
+
+# Navigate back to the root directory
+cd ..
+
+# Run the server (Port 8080, 8 Threads, Cache capacity 50)
+./build/server 8080 8 50
+
+
+========
+on google
+http://localhost:8080/index.html

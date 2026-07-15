@@ -78,6 +78,13 @@ int SocketServer::acceptClient() {
         return -1; // Return -1 instead of throwing to allow the server to keep running
     }
 
+    // Configure the client socket to have a 5-second receive timeout.
+    // This prevents worker threads from hanging forever if a browser opens a connection but sends no data.
+    struct timeval timeout;
+    timeout.tv_sec = 5;
+    timeout.tv_usec = 0;
+    setsockopt(clientSocket, SOL_SOCKET, SO_RCVTIMEO, (const char*)&timeout, sizeof(timeout));
+
     return clientSocket;
 }
 
